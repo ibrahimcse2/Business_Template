@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="description" content="business - Corporate Responsive HTML template">
+<meta name="keywords" content="HTML,CSS,HTML5, CSS3, Corporate, Business, template, Bootstrap, JavaScript">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coming_Soon</title>
+<link href="assets/images/fivicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/sm-clean.css">
+<link rel="stylesheet" href="assets/css/sm-core-css.css">
+<link rel="stylesheet" href="assets/css/owl.carousel.css">
+<link rel="stylesheet" href="assets/css/owl.theme.default.css">
+<link rel="stylesheet" href="https://netizensstore.com/netbizz_theme/netbizz_HTML/multipage_4/assets/css/grt-youtube-popup.css">
+<link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<div class="wrapper">
+  <main class="content">
+    <h1>COMING SOON</h1>
+    <p>Our Website is under construction. Follow us for update now!</p>
+    <div class="countdown">
+      <div class="countdown__days time-box">
+        <div class="number"></div>
+        <span class>Days</span> </div>
+      <div class="countdown__hours time-box">
+        <div class="number"></div>
+        <span class>Hours</span> </div>
+      <div class="countdown__minutes time-box">
+        <div class="number"></div>
+        <span class>Minutes</span> </div>
+      <div class="countdown__seconds time-box">
+        <div class="number"></div>
+        <span class>Seconds</span> </div>
+    </div>
+    <form class="form-subscribe" action="comingsoon.html#">
+      <div class="input-group cooming">
+        <input type="text" class="form-control cooming_soon input-lg" placeholder="Email Address">
+        <span class="input-group-btn">
+        <button class="btn btn-success btn-lg1" type="submit"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+        </span> </div>
+    </form>
+    <div class="coming_icon">
+      <nav>
+        <ul id="coming_social">
+          <li><a href="comingsoon.html#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="comingsoon.html#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="comingsoon.html#"><i class="fa fa-google-plus"></i></a></li>
+          <li><a href="comingsoon.html#"><i class="fa fa-linkedin"></i></a></li>
+        </ul>
+      </nav>
+    </div>
+  </main>
+</div>
+<!-- /scroll_to_top start--> 
+<a href="comingsoon.html#" class="scrollToTop error_top"><i class="fa fa-arrow-up" aria-hidden="true"></i></a> 
+<!-- /scroll_to_top end--> 
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+
+<!-- Bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script> 
+
+<!-- projects-->
+<script src="assets/js/Isotope.js"></script> 
+
+<!-- header menu -->
+<script src="assets/js/jquery.smartmenus.min.js"></script> 
+
+<!-- carousel slider -->
+<script src="assets/js/owl.carousel.js"></script> 
+
+<!-- images popup -->
+<script src="assets/js/lightbox.js"></script> 
+
+<!-- Global Init -->
+<script src="assets/js/custom.js"></script>
+<script>
+  (() => {
+  // Specify the deadline date
+  const deadlineDate = new Date('July 2, 2017 23:59:59').getTime();
+  
+  // Cache all countdown boxes into consts
+  const countdownDays = document.querySelector('.countdown__days .number');
+  const countdownHours= document.querySelector('.countdown__hours .number');
+  const countdownMinutes= document.querySelector('.countdown__minutes .number');
+  const countdownSeconds= document.querySelector('.countdown__seconds .number');
+
+  // Update the count down every 1 second (1000 milliseconds)
+  setInterval(() => {    
+    // Get current date and time
+    const currentDate = new Date().getTime();
+
+    // Calculate the distance between current date and time and the deadline date and time
+    const distance = deadlineDate - currentDate;
+
+    // Calculations the data for remaining days, hours, minutes and seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Insert the result data into individual countdown boxes
+    countdownDays.innerHTML = days;
+    countdownHours.innerHTML = hours;
+    countdownMinutes.innerHTML = minutes;
+    countdownSeconds.innerHTML = seconds;
+  }, 1000);
+})();
+</script>
+</body>
+</html>
